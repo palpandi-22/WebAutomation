@@ -5,11 +5,11 @@
     <classes>
       <class name="com.openmrs.tests.LoginTest">
         <methods>
-          <include name="init_Browser"/>
+          <include name="TC_03_Upload_Attachment_and_Verify_Patient_Documents"/>
           <include name="startDriver"/>
+          <include name="init_Browser"/>
           <include name="deleteAccount"/>
           <include name="quitDriver"/>
-          <include name="TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights"/>
         </methods>
       </class> <!-- com.openmrs.tests.LoginTest -->
     </classes>

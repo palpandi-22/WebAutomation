@@ -8,48 +8,19 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">51,465</td><td></td><td></td></tr>
+<tr><th colspan="8">Automation Test Suite</th></tr>
+<tr><td><a href="#t0">Regression Tests execution over Firefox Browser</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">144,958</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.openmrs.tests.LoginTest</td><td><a href="#m0">TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights</a></td><td rowspan="1">1751867749902</td><td rowspan="1">48811</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Automation Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Tests execution over Firefox Browser &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.openmrs.tests.LoginTest</td><td><a href="#m0">deleteAccount</a></td><td rowspan="1">1751953258603</td><td rowspan="1">1</td></tr><tr><th colspan="4">Regression Tests execution over Firefox Browser &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">com.openmrs.tests.LoginTest</td><td><a href="#m1">TC_01_verify_the_Login</a></td><td rowspan="1">1751953114916</td><td rowspan="1">6436</td></tr><tr class="passedeven"><td><a href="#m2">TC_02_verify_the_New_Register_Patient</a></td><td rowspan="1">1751953122446</td><td rowspan="1">18538</td></tr><tr class="passedeven"><td><a href="#m3">TC_03_Upload_Attachment_and_Verify_Patient_Documents</a></td><td rowspan="1">1751953142378</td><td rowspan="1">35586</td></tr><tr class="passedeven"><td><a href="#m4">TC_04_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights</a></td><td rowspan="1">1751953181039</td><td rowspan="1">32225</td></tr><tr class="passedeven"><td><a href="#m5">TC_05_Merge_Visits_Add_Past_Visit_Verify_DatePicker_Disables_Future_Dates</a></td><td rowspan="1">1751953214472</td><td rowspan="1">24203</td></tr><tr class="passedeven"><td><a href="#m6">TC_06_Verify_Complete_Removal_Of_Deleted_Patient_Data</a></td><td rowspan="1">1751953239852</td><td rowspan="1">18462</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.openmrs.tests.LoginTest#TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[contains(text(),&apos;Logged in as&apos;)] (tried for 45 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\zervv\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61956/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 088b1185dd8becf1ccbaeae19b1fc49a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.openmrs.PageLocators.Login.click_Login_Btn(Login.java:50)
-	at com.openmrs.PageLocators.Login.doLogin(Login.java:63)
-	at com.openmrs.tests.LoginTest.TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights(LoginTest.java:152)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression Tests execution over Firefox Browser</h2><h3 id="m0">com.openmrs.tests.LoginTest#deleteAccount</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>null</td><td>null</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because the return value of &quot;com.openmrs.basetest.BaseTest.getDriver()&quot; is null
+	at com.openmrs.basetest.BaseTest.deleteAccount(BaseTest.java:197)
+... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.openmrs.tests.LoginTest#TC_01_verify_the_Login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.openmrs.tests.LoginTest#TC_02_verify_the_New_Register_Patient</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.openmrs.tests.LoginTest#TC_03_Upload_Attachment_and_Verify_Patient_Documents</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.openmrs.tests.LoginTest#TC_04_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.openmrs.tests.LoginTest#TC_05_Merge_Visits_Add_Past_Visit_Verify_DatePicker_Disables_Future_Dates</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.openmrs.tests.LoginTest#TC_06_Verify_Complete_Removal_Of_Deleted_Patient_Data</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

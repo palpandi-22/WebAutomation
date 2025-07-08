@@ -1,64 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-07T11:25:47 IST" name="Default suite" finished-at="2025-07-07T11:26:39 IST" duration-ms="51465">
+  <suite started-at="2025-07-08T11:08:33 IST" name="Automation Test Suite" finished-at="2025-07-08T11:10:58 IST" duration-ms="144958">
     <groups>
     </groups>
-    <test started-at="2025-07-07T11:25:47 IST" name="Default test" finished-at="2025-07-07T11:26:39 IST" duration-ms="51465">
+    <test started-at="2025-07-08T11:08:33 IST" name="Regression Tests execution over Firefox Browser" finished-at="2025-07-08T11:10:58 IST" duration-ms="144958">
       <class name="com.openmrs.tests.LoginTest">
-        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-07T11:25:47 IST" name="startDriver" finished-at="2025-07-07T11:25:49 IST" duration-ms="2232" status="PASS">
+        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:08:33 IST" name="startDriver" finished-at="2025-07-08T11:08:34 IST" duration-ms="1232" status="PASS">
           <params>
             <param index="0">
-              <value is-null="true"/>
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void com.openmrs.tests.LoginTest.TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights() throws java.lang.InterruptedException,java.io.IOException,java.awt.AWTException]]>
+                <![CDATA[public void com.openmrs.tests.LoginTest.TC_01_verify_the_Login() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method signature="TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-07T11:25:49 IST" name="TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights" finished-at="2025-07-07T11:26:38 IST" duration-ms="48811" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="TC_01_verify_the_Login()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:08:34 IST" name="TC_01_verify_the_Login" finished-at="2025-07-08T11:08:41 IST" duration-ms="6436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_verify_the_Login -->
+        <test-method is-config="true" signature="quitDriver(java.lang.String,org.testng.ITestResult)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:08:41 IST" name="quitDriver" finished-at="2025-07-08T11:08:41 IST" duration-ms="144" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=TC_01_verify_the_Login status=SUCCESS method=LoginTest.TC_01_verify_the_Login()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:08:41 IST" name="startDriver" finished-at="2025-07-08T11:08:42 IST" duration-ms="930" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.openmrs.tests.LoginTest.TC_02_verify_the_New_Register_Patient() throws java.lang.InterruptedException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method signature="TC_02_verify_the_New_Register_Patient()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:08:42 IST" name="TC_02_verify_the_New_Register_Patient" finished-at="2025-07-08T11:09:00 IST" duration-ms="18538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_verify_the_New_Register_Patient -->
+        <test-method is-config="true" signature="quitDriver(java.lang.String,org.testng.ITestResult)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:09:00 IST" name="quitDriver" finished-at="2025-07-08T11:09:01 IST" duration-ms="218" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=TC_02_verify_the_New_Register_Patient status=SUCCESS method=LoginTest.TC_02_verify_the_New_Register_Patient()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:09:01 IST" name="startDriver" finished-at="2025-07-08T11:09:02 IST" duration-ms="1165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.openmrs.tests.LoginTest.TC_03_Upload_Attachment_and_Verify_Patient_Documents() throws java.lang.InterruptedException,java.io.IOException,java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method signature="TC_03_Upload_Attachment_and_Verify_Patient_Documents()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:09:02 IST" name="TC_03_Upload_Attachment_and_Verify_Patient_Documents" finished-at="2025-07-08T11:09:37 IST" duration-ms="35586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_Upload_Attachment_and_Verify_Patient_Documents -->
+        <test-method is-config="true" signature="quitDriver(java.lang.String,org.testng.ITestResult)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:09:38 IST" name="quitDriver" finished-at="2025-07-08T11:09:39 IST" duration-ms="1128" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=TC_03_Upload_Attachment_and_Verify_Patient_Documents status=SUCCESS method=LoginTest.TC_03_Upload_Attachment_and_Verify_Patient_Documents()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:09:39 IST" name="startDriver" finished-at="2025-07-08T11:09:41 IST" duration-ms="1690" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.openmrs.tests.LoginTest.TC_04_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights() throws java.lang.InterruptedException,java.io.IOException,java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method signature="TC_04_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:09:41 IST" name="TC_04_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights" finished-at="2025-07-08T11:10:13 IST" duration-ms="32225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights -->
+        <test-method is-config="true" signature="quitDriver(java.lang.String,org.testng.ITestResult)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:10:13 IST" name="quitDriver" finished-at="2025-07-08T11:10:13 IST" duration-ms="172" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=TC_04_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights status=SUCCESS method=LoginTest.TC_04_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:10:13 IST" name="startDriver" finished-at="2025-07-08T11:10:14 IST" duration-ms="975" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.openmrs.tests.LoginTest.TC_05_Merge_Visits_Add_Past_Visit_Verify_DatePicker_Disables_Future_Dates() throws java.lang.InterruptedException,java.io.IOException,java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method signature="TC_05_Merge_Visits_Add_Past_Visit_Verify_DatePicker_Disables_Future_Dates()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:10:14 IST" name="TC_05_Merge_Visits_Add_Past_Visit_Verify_DatePicker_Disables_Future_Dates" finished-at="2025-07-08T11:10:38 IST" duration-ms="24203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_05_Merge_Visits_Add_Past_Visit_Verify_DatePicker_Disables_Future_Dates -->
+        <test-method is-config="true" signature="quitDriver(java.lang.String,org.testng.ITestResult)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:10:38 IST" name="quitDriver" finished-at="2025-07-08T11:10:38 IST" duration-ms="210" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=TC_05_Merge_Visits_Add_Past_Visit_Verify_DatePicker_Disables_Future_Dates status=SUCCESS method=LoginTest.TC_05_Merge_Visits_Add_Past_Visit_Verify_DatePicker_Disables_Future_Dates()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="startDriver(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:10:38 IST" name="startDriver" finished-at="2025-07-08T11:10:39 IST" duration-ms="958" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.openmrs.tests.LoginTest.TC_06_Verify_Complete_Removal_Of_Deleted_Patient_Data() throws java.lang.InterruptedException,java.io.IOException,java.awt.AWTException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDriver -->
+        <test-method signature="TC_06_Verify_Complete_Removal_Of_Deleted_Patient_Data()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:10:39 IST" name="TC_06_Verify_Complete_Removal_Of_Deleted_Patient_Data" finished-at="2025-07-08T11:10:58 IST" duration-ms="18462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_06_Verify_Complete_Removal_Of_Deleted_Patient_Data -->
+        <test-method is-config="true" signature="quitDriver(java.lang.String,org.testng.ITestResult)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:10:58 IST" name="quitDriver" finished-at="2025-07-08T11:10:58 IST" duration-ms="255" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=TC_06_Verify_Complete_Removal_Of_Deleted_Patient_Data status=SUCCESS method=LoginTest.TC_06_Verify_Complete_Removal_Of_Deleted_Patient_Data()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="deleteAccount(java.lang.String,org.testng.ITestResult)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-08T11:10:58 IST" name="deleteAccount" finished-at="2025-07-08T11:10:58 IST" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[contains(text(),'Logged in as')] (tried for 45 second(s) with 500 milliseconds interval)
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\zervv\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61956/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 088b1185dd8becf1ccbaeae19b1fc49a]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.quit()" because the return value of "com.openmrs.basetest.BaseTest.getDriver()" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[contains(text(),'Logged in as')] (tried for 45 second(s) with 500 milliseconds interval)
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\zervv\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61956/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 088b1185dd8becf1ccbaeae19b1fc49a
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.openmrs.PageLocators.Login.click_Login_Btn(Login.java:50)
-at com.openmrs.PageLocators.Login.doLogin(Login.java:63)
-at com.openmrs.tests.LoginTest.TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights(LoginTest.java:152)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because the return value of "com.openmrs.basetest.BaseTest.getDriver()" is null
+at com.openmrs.basetest.BaseTest.deleteAccount(BaseTest.java:197)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:386)
 at org.testng.SuiteRunner.run(SuiteRunner.java:312)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
@@ -71,37 +246,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights -->
-        <test-method is-config="true" signature="quitDriver(java.lang.String,org.testng.ITestResult)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-07T11:26:38 IST" name="quitDriver" finished-at="2025-07-07T11:26:39 IST" duration-ms="318" status="PASS">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name=TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights status=FAILURE method=LoginTest.TC_003_Upload_Capture_Vitals_and_Verify_Patient_Height_Weights()[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="deleteAccount(java.lang.String,org.testng.ITestResult)[pri:0, instance:com.openmrs.tests.LoginTest@7ef27d7f]" started-at="2025-07-07T11:26:39 IST" name="deleteAccount" finished-at="2025-07-07T11:26:39 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-            <param index="1">
-              <value is-null="true"/>
-            </param>
-          </params>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAccount -->
       </class> <!-- com.openmrs.tests.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Regression Tests execution over Firefox Browser -->
+  </suite> <!-- Automation Test Suite -->
 </testng-results>

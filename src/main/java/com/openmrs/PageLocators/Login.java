@@ -55,13 +55,16 @@ public class Login extends BasePage {
 		return driver.findElement(Welcome_Message).getText();
 	}
 	
+	public By getWelcomeMessage() {
+		return Welcome_Message;
+	}
 	public void doLogin() throws InterruptedException {
 		     load_Login_Page();
 		     enter_Username(ConfigLoader.getInstance().getUsername());
 		     enter_Password(ConfigLoader.getInstance().getPassword());
 		     click_Laboratory();
 		     click_Login_Btn();
-	     Assert.assertTrue(getWelcomeText().contains("Logged in as"));
+	    Assert.assertTrue(getWelcomeText().contains("Logged in as") , "❌ Expected text to contain 'Logged in as', but was: " + getWelcomeText());
 	}
 	
 	

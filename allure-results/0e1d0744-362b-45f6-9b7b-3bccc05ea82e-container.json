@@ -1,1 +1,0 @@
-{"uuid":"0e1d0744-362b-45f6-9b7b-3bccc05ea82e","name":"Default suite","children":["3a60bf52-ce13-4d31-9e0e-03d387033ecf"],"befores":[],"afters":[{"name":"deleteAccount","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1751867799158,"stop":1751867799158}],"start":1751867747602,"stop":1751867799160}

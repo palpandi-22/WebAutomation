@@ -7,14 +7,13 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
+import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.openmrs.base.BasePage;
 import com.openmrs.enums.WaitStrategy;
@@ -26,21 +25,22 @@ public class PatientDetails extends BasePage  {
 	}
 	
 	private static final By Start_Visit_Btn                  =  By.xpath("//a[@id=\"org.openmrs.module.coreapps.createVisit\"]");
-    private static By End_Visit_Btn                          =  By.xpath("//a[@id='referenceapplication.realTime.endVisit']");
+    private static final By End_Visit_Btn                    =  By.xpath("//ul[@class=\"float-left d-none d-lg-block\"]//a[@id='referenceapplication.realTime.endVisit']");
+    private static final By EndVisit_Yes_Confirm             =  By.xpath("//div[@id=\"end-visit-dialog\"]//button[normalize-space()='Yes']");
     private static final By Merge_Visit_Btn                  =  By.xpath("//a[@id='org.openmrs.module.coreapps.mergeVisits']");
-    private static final By Add_Visit_Btn                    =  By.xpath("//a[@id='org.openmrs.module.coreapps.createRetrospectiveVisit']");
+    private static final By Add_PastVisit_Btn                =  By.xpath("//a[@id='org.openmrs.module.coreapps.createRetrospectiveVisit']");
     private static final By Delete_Patient_Btn               =  By.xpath("//a[@id='org.openmrs.module.coreapps.deletePatient']");
     
 	private static final By Start_Visit_Confirm_Btn          =  By.xpath("//button[@id='start-visit-with-visittype-confirm']");
 	private static final By Attachments                      =  By.xpath("//a[@id='attachments.attachments.visitActions.default']");
 	private static final By Capture_Vitals                   =  By.xpath("//a[@id='referenceapplication.realTime.vitals']");
 	private static final By End_Visit                        =  By.xpath("//a[normalize-space()='End Visit']");
+	private static final By EndVisit_Yes_Btn                 =  By.xpath("//div[@id=\"simplemodal-container\"]//button[normalize-space()='Yes']");
 	private static final By Upload_Place                     =  By.id("visit-documents-dropzone");
 	private static final By Caption_Field                    =  By.xpath("//textarea[@placeholder='Enter a caption']");
-	private static final By Upload_Form_Btn                  =  By.xpath("//button[text()='Clear forms']");
     private static final By Success_Toaster                  =  By.xpath("//div[@class=\"toast-item-close\"]");
+    private static final By Upload_File_Button               =  By.xpath("//att-file-upload[@class='ng-isolate-scope']//button[normalize-space()='Upload file']");
     private static final By Back_Patient_Details             =  By.xpath("//ul[@id=\"breadcrumbs\"]/li[2]");
-	private static final By Uploaded_Attachment              =  By.xpath("(//div[@class=\"att_thumbnail-image-section att_click-pointer\"])[1]");
     private static final By Uploaded_Date                    =  By.xpath("(//li[@class='ng-scope']/a)[1]");
 	private static final By Uplodaed_Label                   =  By.xpath("(//li[@class='ng-scope']/a)[1]/following-sibling::div");
 	private static final By yes_Button                       =  By.xpath("(//button[normalize-space(text())='Yes'])[1]");
@@ -61,15 +61,19 @@ public class PatientDetails extends BasePage  {
     private static final By Merge_Selected_Visited_btn       =  By.xpath("//input[@id='mergeVisitsBtn']");
     
     private static final By Delete_Reason_Field              =  By.xpath("//input[@id='delete-reason']");
-    private static final By Delete_Confirm_Button            =  By.xpath("(//div[@class=\"dialog-content\"]//button[normalize-space()='Confirm'])[2]");
+    private static final By Delete_Confirm_Button            =  By.xpath("//div[@id=\"delete-patient-creation-dialog\"]//button[normalize-space()='Confirm']");
 
 	private static final By Find_Patient_Record_Btn          =  By.xpath("//a[@id='coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension']");
     private static final By Patient_Search                   =  By.xpath("//input[@id='patient-search']");
     private static final By No_Data_Found_message            =  By.xpath("//td[@class='dataTables_empty']");
-   	
-    //table[@class=" table-condensed"]//tr/td[normalize-space()='30']
-    
+   	    
 
+    public PatientDetails Load_Home_Menu() throws InterruptedException {
+        load("/index.htm");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(new Login(driver).getWelcomeMessage()));
+    	return this;
+    }
+    
     public PatientDetails click_StartVisit_Button() {
 		click(Start_Visit_Btn,  WaitStrategy.CLICKABLE, " End Visit Button ");
         return this;
@@ -77,6 +81,8 @@ public class PatientDetails extends BasePage  {
     
     public PatientDetails click_EndVisit_Button() {
 		click(End_Visit_Btn,  WaitStrategy.CLICKABLE, " End Visit Button ");
+		click(EndVisit_Yes_Confirm,  WaitStrategy.CLICKABLE, " End Visit Confrim Popup Yes Button ");
+		waitForGivenTime(1);
 		return this;
 	}
     
@@ -85,8 +91,8 @@ public class PatientDetails extends BasePage  {
 		return this;
 	}
     
-    public PatientDetails click_AddVisit_Button() {
-		click(Add_Visit_Btn,  WaitStrategy.CLICKABLE, " Add Visit Button ");
+    public PatientDetails click_Add_PastVisit_Button() {
+		click(Add_PastVisit_Btn,  WaitStrategy.CLICKABLE, " Add Visit Button ");
 		return this;
 	}
 	
@@ -113,8 +119,8 @@ public class PatientDetails extends BasePage  {
     
     public PatientDetails click_EndVisit() {
     	click(End_Visit , WaitStrategy.CLICKABLE , " End Visit ");
-		click(yes_Button,  WaitStrategy.CLICKABLE, " Yes Button ");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Back_Patient_Details));
+		click(EndVisit_Yes_Btn,  WaitStrategy.CLICKABLE, " Yes Button ");
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(EndVisit_Yes_Btn));
     	return this;
     }
     
@@ -153,24 +159,6 @@ public class PatientDetails extends BasePage  {
         // Press Enter
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
-
-        // Step 4: Wait for upload progress to appear
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.dz-progress")));
-            System.out.println("✅ Upload progress started.");
-        } catch (TimeoutException e) {
-            System.out.println("⚠️ Upload progress bar not shown — may be skipped for small files.");
-        }
-
-        // Step 5: Wait for upload progress bar to disappear (upload complete)
-        try {
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.dz-progress")));
-            System.out.println("✅ File uploaded successfully.");
-        } catch (TimeoutException e) {
-            System.out.println("❌ Upload progress bar still visible after timeout.");
-        }
-
         waitForGivenTime(2); // Optional pause before next steps
         return this;
     }
@@ -182,8 +170,8 @@ public class PatientDetails extends BasePage  {
 		return this;
 	}
 	
-	public PatientDetails click_Upload_Form_Btn() {
-		click(Back_Patient_Details,  WaitStrategy.CLICKABLE, " Breadcrumb Back Arrow ");
+	public PatientDetails click_Upload_File_Btn() throws InterruptedException {
+		click(Upload_File_Button,  WaitStrategy.CLICKABLE, " Upload File Arrow ");
 		wait.until(ExpectedConditions.presenceOfElementLocated(Success_Toaster));
 		return this;
 	}
@@ -193,13 +181,14 @@ public class PatientDetails extends BasePage  {
 	}
 	
 	public PatientDetails click_Back_Arrow() {
-		click(Upload_Form_Btn,  WaitStrategy.CLICKABLE, " Upload Form Button ");
-		waitForGivenTime(2);
+		click(Back_Patient_Details,  WaitStrategy.CLICKABLE, " Back Form Patient Details ");
+		waitForGivenTime(3);
 		return this;
 	}
 	
-	public boolean isAttachmentSuccess() {
-		return isDisplayed(Uploaded_Attachment);
+	public boolean isAttachmentSuccess(String Captions) {
+		By Attachment_Caption = By.xpath("//p[normalize-space()='"+Captions+"']");
+		return isDisplayed(Attachment_Caption);
 	}
 	
 	public String getUpdatedDate() {
@@ -238,7 +227,8 @@ public class PatientDetails extends BasePage  {
 	
 	public double getBMIResult() {
 	    String bmiText = driver.findElement(BMI_Result).getText().trim();
-	    return Double.parseDouble(bmiText);
+	    double bmi = Double.parseDouble(bmiText);
+	    return Math.round(bmi * 10.0) / 10.0; // Rounds to 1 decimal place
 	}
 	
 	public double calculateBMI(String weightStr, String heightStr) {
@@ -247,8 +237,7 @@ public class PatientDetails extends BasePage  {
 
 	    double heightM = heightCm / 100.0;
 	    double bmi = weightKg / (heightM * heightM);
-
-	    return Math.round(bmi * 100.0) / 100.0; // Round to 2 decimal places
+	    return Math.round(bmi * 10.0) / 10.0; // Round to 1 decimal place
 	}
 	
 	public PatientDetails click_Save_Form_Button() {
@@ -296,9 +285,22 @@ public class PatientDetails extends BasePage  {
 		return this;
 	}
 	
-	public PatientDetails click_Merge_button() {
+	public PatientDetails click_Merge_Selected_button() {
 		click(Merge_Selected_Visited_btn,  WaitStrategy.CLICKABLE, " Merge button ");
+		waitForGivenTime(1);
 		return this;
+	}
+	
+	public boolean isFutureDateDisabled(int date) {
+		String day = String.valueOf(date);
+		List<WebElement> dates = driver.findElements(By.xpath("//td[text()='" + day + "']"));
+		for (WebElement Calenderdate : dates) {
+			String classAttr = Calenderdate.getAttribute("class");
+			if (classAttr.contains("disabled")) {
+				return true; // Found a disabled future date
+			}
+		}
+		return false; // No disabled version found
 	}
 	
 	public PatientDetails enter_Reason_Delete (String Reasons) {
@@ -308,6 +310,7 @@ public class PatientDetails extends BasePage  {
 
 	public PatientDetails click_Delete_Confirmation() {
 		click(Delete_Confirm_Button,  WaitStrategy.CLICKABLE, " Delete Cofirm button ");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Success_Toaster));
 		return this;
 	}
 	
@@ -331,6 +334,8 @@ public class PatientDetails extends BasePage  {
 	public boolean isPresentMessage() {
 		return isDisplayed(No_Data_Found_message);
 	}
+
+	
 
 	
 }

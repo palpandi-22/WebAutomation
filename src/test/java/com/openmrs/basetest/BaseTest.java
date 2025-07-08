@@ -193,9 +193,7 @@ public class BaseTest {
 	
 	@AfterSuite
 	public synchronized void deleteAccount(@Optional String browser, ITestResult result)	{
-	
 		getDriver().quit();
-
 	}
 
 	
